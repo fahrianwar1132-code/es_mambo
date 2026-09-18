@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Es Mambo Kekinian</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍧 ES MAMBO
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#pesanan">Pesanan</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">
+                SEGAR • MANIS • KEKINIAN
+            </p>
+
+            <h1>
+                ES MAMBO
+                <span>2 RIBU!</span>
+            </h1>
+
+            <p class="hero-description">
+                Nikmati Es Mambo dengan berbagai rasa favorit.
+                Semua rasa hanya Rp2.000!
+            </p>
+
+            <a href="#produk" class="button">
+                🍧 Lihat Rasa
+            </a>
+
+        </div>
+
+        <div class="hero-icon">
+            🍧
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUK ================= -->
+
+    <section id="produk" class="produk">
+
+        <h2>PILIH RASA FAVORITMU</h2>
+
+        <p class="subtitle">
+            Semua rasa cuma <b>Rp2.000</b>
+        </p>
+
+
+        <div class="produk-grid">
+
+
+            <!-- TARO -->
+
+            <div class="card taro">
+
+                <div class="produk-icon">
+                    🟣
+                </div>
+
+                <h3>Taro</h3>
+
+                <p>
+                    Rasa taro lembut dan manis.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Taro')">
+                    + Tambah
+                </button>
+
+            </div>
+
+
+            <!-- COKLAT -->
+
+            <div class="card coklat">
+
+                <div class="produk-icon">
+                    🍫
+                </div>
+
+                <h3>Coklat</h3>
+
+                <p>
+                    Rasa coklat manis dan lezat.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Coklat')">
+                    + Tambah
+                </button>
+
+            </div>
+
+
+            <!-- MATCHA -->
+
+            <div class="card matcha">
+
+                <div class="produk-icon">
+                    🍵
+                </div>
+
+                <h3>Matcha</h3>
+
+                <p>
+                    Rasa matcha yang segar.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Matcha')">
+                    + Tambah
+                </button>
+
+            </div>
+
+
+            <!-- STRAWBERRY -->
+
+            <div class="card strawberry">
+
+                <div class="produk-icon">
+                    🍓
+                </div>
+
+                <h3>Strawberry</h3>
+
+                <p>
+                    Manis dan segarnya strawberry.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Strawberry')">
+                    + Tambah
+                </button>
+
+            </div>
+
+
+            <!-- BUBBLEGUM -->
+
+            <div class="card bubblegum">
+
+                <div class="produk-icon">
+                    🫧
+                </div>
+
+                <h3>Bubblegum</h3>
+
+                <p>
+                    Rasa bubblegum yang unik.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Bubblegum')">
+                    + Tambah
+                </button>
+
+            </div>
+
+
+            <!-- ALPUKAT -->
+
+            <div class="card alpukat">
+
+                <div class="produk-icon">
+                    🥑
+                </div>
+
+                <h3>Alpukat</h3>
+
+                <p>
+                    Rasa alpukat yang creamy.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Alpukat')">
+                    + Tambah
+                </button>
+
+            </div>
+
+
+            <!-- RED VELVET -->
+
+            <div class="card redvelvet">
+
+                <div class="produk-icon">
+                    ❤️
+                </div>
+
+                <h3>Red Velvet</h3>
+
+                <p>
+                    Rasa red velvet yang lembut.
+                </p>
+
+                <strong>
+                    Rp2.000
+                </strong>
+
+                <button onclick="tambahPesanan('Red Velvet')">
+                    + Tambah
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PESANAN ================= -->
+
+    <section id="pesanan" class="pesanan">
+
+        <h2>🛒 PESANAN KAMU</h2>
+
+        <p class="subtitle">
+            Atur jumlah pesanan sebelum checkout.
+        </p>
+
+
+        <div id="daftarPesanan">
+
+            <div class="kosong">
+                Belum ada pesanan 🍧
+            </div>
+
+        </div>
+
+
+        <div class="total-box">
+
+            <span>
+                TOTAL
+            </span>
+
+            <strong id="totalHarga">
+                Rp0
+            </strong>
+
+        </div>
+
+
+        <div class="pesanan-button">
+
+            <button
+                class="hapus-button"
+                onclick="hapusSemua()">
+
+                🗑️ Hapus Semua
+
+            </button>
+
+
+            <button
+                class="wa-button"
+                onclick="pesanWhatsApp()">
+
+                💬 Pesan via WhatsApp
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TENTANG ================= -->
+
+    <section id="tentang" class="tentang">
+
+        <h2>🍧 TENTANG ES MAMBO</h2>
+
+        <p>
+
+            Es Mambo Kekinian menyediakan berbagai rasa
+            yang segar dan enak dengan harga terjangkau.
+
+            Pilih rasa favoritmu dan pesan langsung
+            melalui WhatsApp.
+
+        </p>
+
+
+        <div class="keunggulan">
+
+            <div>
+                ❄️
+                <span>Segar</span>
+            </div>
+
+            <div>
+                💰
+                <span>Murah</span>
+            </div>
+
+            <div>
+                😋
+                <span>Enak</span>
+            </div>
+
+            <div>
+                🌈
+                <span>Banyak Rasa</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KONTAK ================= -->
+
+    <section id="kontak" class="kontak">
+
+        <h2>📞 HUBUNGI KAMI</h2>
+
+        <p>
+            Mau pesan Es Mambo?
+        </p>
+
+        <button
+            class="wa-button"
+            onclick="pesanWhatsApp()">
+
+            💬 Pesan Sekarang
+
+        </button>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            🍧 ES MAMBO KEKINIAN
+        </h3>
+
+        <p>
+            Semua rasa Rp2.000
+        </p>
+
+        <small>
+            © 2026 Es Mambo Ibu Roni
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
